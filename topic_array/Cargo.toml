@@ -1,0 +1,2 @@
+[workspace]
+members = ["binary_search", "delete_in_place", "first_last_pos", "generate_matrix", "insert_place", "min_sub_array_len", "sorted_squares", "two_sum"]

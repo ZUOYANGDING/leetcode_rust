@@ -1,0 +1,2 @@
+[workspace]
+members = [ "intersaction_node","my_linked_list", "remove_element", "remove_nth_from_end", "reverse_list", "swap_pairs"]

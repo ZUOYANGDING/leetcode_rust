@@ -1,0 +1,9 @@
+[workspace]
+resolver = "2"
+members = [
+    "kmp",
+    "repeated_substring",
+    "reverse_string",
+    "reverse_string_2",
+    "reverse_words",
+]
