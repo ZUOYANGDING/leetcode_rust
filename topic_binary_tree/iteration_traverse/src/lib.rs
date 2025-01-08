@@ -60,7 +60,7 @@ where
     /// no need extra pointer
     fn preorder_traverse(root: Option<Rc<RefCell<TreeNode<T>>>>, res: &mut Vec<T>) {
         let mut stack = Vec::new();
-        stack.push(root.clone());
+        stack.push(root);
         while let Some(node) = stack.pop() {
             if let Some(n) = node {
                 res.push(n.borrow().val.clone());
@@ -74,7 +74,7 @@ where
     /// Reverse the result, become L | R | M, that is what we want
     fn postorder_traverse(root: Option<Rc<RefCell<TreeNode<T>>>>, res: &mut Vec<T>) {
         let mut stack = Vec::new();
-        stack.push(root.clone());
+        stack.push(root);
         while let Some(node) = stack.pop() {
             if let Some(n) = node {
                 res.push(n.borrow().val.clone());
@@ -87,7 +87,7 @@ where
 
     fn inorder_traverse_alter(root: Option<Rc<RefCell<TreeNode<T>>>>, res: &mut Vec<T>) {
         let mut stack = Vec::new();
-        stack.push((root.clone(), false)); // false to indicate not all its children has not been visited
+        stack.push((root, false)); // false to indicate not all its children has not been visited
         while let Some((node, visited)) = stack.pop() {
             if visited {
                 res.push(node.clone().unwrap().borrow().val.to_owned());
@@ -112,7 +112,7 @@ where
 
     fn preorder_traverse_alter(root: Option<Rc<RefCell<TreeNode<T>>>>, res: &mut Vec<T>) {
         let mut stack = Vec::new();
-        stack.push((root.clone(), false));
+        stack.push((root, false));
         while let Some((node, visited)) = stack.pop() {
             if visited {
                 res.push(node.clone().unwrap().borrow().val.to_owned());
@@ -135,7 +135,7 @@ where
 
     fn postorder_traverse_alter(root: Option<Rc<RefCell<TreeNode<T>>>>, res: &mut Vec<T>) {
         let mut stack = Vec::new();
-        stack.push((root.clone(), false));
+        stack.push((root, false));
         while let Some((node, visited)) = stack.pop() {
             if visited {
                 res.push(node.clone().unwrap().borrow().val.to_owned());
