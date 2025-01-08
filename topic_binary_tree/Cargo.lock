@@ -7,7 +7,19 @@ name = "bfs_traverse"
 version = "0.1.0"
 
 [[package]]
+name = "invert_tree"
+version = "0.1.0"
+
+[[package]]
 name = "iteration_traverse"
+version = "0.1.0"
+
+[[package]]
+name = "max_depth"
+version = "0.1.0"
+
+[[package]]
+name = "min_depth"
 version = "0.1.0"
 
 [[package]]

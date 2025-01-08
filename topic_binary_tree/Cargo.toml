@@ -1,3 +1,3 @@
 [workspace]
 resolver = "2"
-members = [ "bfs_traverse","iteration_traverse", "recursive_traverse"]
+members = [ "bfs_traverse", "invert_tree","iteration_traverse", "max_depth", "min_depth", "recursive_traverse"]
