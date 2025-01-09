@@ -7,5 +7,17 @@ name = "combination_sum"
 version = "0.1.0"
 
 [[package]]
+name = "combination_sum_2"
+version = "0.1.0"
+
+[[package]]
+name = "combination_sum_3"
+version = "0.1.0"
+
+[[package]]
 name = "combine"
+version = "0.1.0"
+
+[[package]]
+name = "letter_combinations_of_phone_number"
 version = "0.1.0"

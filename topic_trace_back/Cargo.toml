@@ -1,3 +1,9 @@
 [workspace]
-workspace.resolver = 2
-members = ["combination_sum", "combine"]
+resolver = "2"
+members = [
+    "combination_sum",
+    "combination_sum_2",
+    "combination_sum_3",
+    "combine",
+    "letter_combinations_of_phone_number",
+]
