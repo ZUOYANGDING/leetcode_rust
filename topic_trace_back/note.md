@@ -16,10 +16,13 @@ Applied as DFS/BFS
 ##### Template
 ```Rust
 fn backtracing(param) {
-    if stop condition [
+    if stop condition {
         save the result
         return;
-    ]
+    }
+
+    // The iteration is iterating all possible sitation of current layer
+    // It might can be pruned
     for element in set of elements in current layer {
         dealing with the element
         backtracing(branch, selection list)
