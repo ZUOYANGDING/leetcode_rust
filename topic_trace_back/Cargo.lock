@@ -3,5 +3,9 @@
 version = 4
 
 [[package]]
+name = "combination_sum"
+version = "0.1.0"
+
+[[package]]
 name = "combine"
 version = "0.1.0"

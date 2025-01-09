@@ -1,2 +1,3 @@
 [workspace]
-members = ["combine"]
+workspace.resolver = 2
+members = ["combination_sum", "combine"]
