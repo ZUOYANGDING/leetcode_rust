@@ -11,6 +11,10 @@ name = "invert_tree"
 version = "0.1.0"
 
 [[package]]
+name = "is_symmetric"
+version = "0.1.0"
+
+[[package]]
 name = "iteration_traverse"
 version = "0.1.0"
 
