@@ -21,3 +21,7 @@ version = "0.1.0"
 [[package]]
 name = "letter_combinations_of_phone_number"
 version = "0.1.0"
+
+[[package]]
+name = "sliced_to_palindrome"
+version = "0.1.0"

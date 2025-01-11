@@ -3,6 +3,10 @@
 version = 4
 
 [[package]]
+name = "balance_tree"
+version = "0.1.0"
+
+[[package]]
 name = "bfs_traverse"
 version = "0.1.0"
 
