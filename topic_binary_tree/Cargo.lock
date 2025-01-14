@@ -11,6 +11,10 @@ name = "bfs_traverse"
 version = "0.1.0"
 
 [[package]]
+name = "binary_tree_path"
+version = "0.1.0"
+
+[[package]]
 name = "invert_tree"
 version = "0.1.0"
 
@@ -32,4 +36,8 @@ version = "0.1.0"
 
 [[package]]
 name = "recursive_traverse"
+version = "0.1.0"
+
+[[package]]
+name = "sum_of_left_leaves"
 version = "0.1.0"
