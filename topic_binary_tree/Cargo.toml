@@ -1,3 +1,15 @@
 [workspace]
 resolver = "2"
-members = [ "balance_tree", "bfs_traverse", "binary_tree_path", "invert_tree", "is_symmetric","iteration_traverse", "max_depth", "min_depth", "recursive_traverse", "sum_of_left_leaves"]
+members = [
+    "balance_tree",
+    "bfs_traverse",
+    "binary_tree_path",
+    "invert_tree",
+    "is_symmetric",
+    "iteration_traverse",
+    "max_depth",
+    "min_depth",
+    "most_left_on_bottom",
+    "recursive_traverse",
+    "sum_of_left_leaves",
+]

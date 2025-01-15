@@ -2,14 +2,12 @@
  * Leetcode 404
  */
 use std::{cell::RefCell, fmt::Debug, rc::Rc};
-
 #[derive(Debug, PartialEq, Eq)]
 struct TreeNode<T> {
     val: T,
     left: Option<Rc<RefCell<TreeNode<T>>>>,
     right: Option<Rc<RefCell<TreeNode<T>>>>,
 }
-
 impl<T> TreeNode<T>
 where
     T: Debug + Clone + Into<i32>,
