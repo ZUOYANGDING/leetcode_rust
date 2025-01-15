@@ -29,3 +29,7 @@ version = "0.1.0"
 [[package]]
 name = "sliced_to_palindrome"
 version = "0.1.0"
+
+[[package]]
+name = "subset"
+version = "0.1.0"
