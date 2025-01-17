@@ -5,5 +5,5 @@ members = [
     "combination_sum_2",
     "combination_sum_3",
     "combine",
-    "letter_combinations_of_phone_number", "restore_ip_addresses", "sliced_to_palindrome", "subset",
+    "letter_combinations_of_phone_number", "non_decreasing_subsequence", "restore_ip_addresses", "sliced_to_palindrome", "subset", "subset_with_duplicate",
 ]

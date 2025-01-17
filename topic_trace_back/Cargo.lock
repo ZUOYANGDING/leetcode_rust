@@ -23,6 +23,10 @@ name = "letter_combinations_of_phone_number"
 version = "0.1.0"
 
 [[package]]
+name = "non_decreasing_subsequence"
+version = "0.1.0"
+
+[[package]]
 name = "restore_ip_addresses"
 version = "0.1.0"
 
@@ -32,4 +36,8 @@ version = "0.1.0"
 
 [[package]]
 name = "subset"
+version = "0.1.0"
+
+[[package]]
+name = "subset_with_duplicate"
 version = "0.1.0"
