@@ -15,6 +15,10 @@ name = "binary_tree_path"
 version = "0.1.0"
 
 [[package]]
+name = "has_path_sum"
+version = "0.1.0"
+
+[[package]]
 name = "invert_tree"
 version = "0.1.0"
 
@@ -36,6 +40,10 @@ version = "0.1.0"
 
 [[package]]
 name = "most_left_on_bottom"
+version = "0.1.0"
+
+[[package]]
+name = "rebuild_tree_by_2_traversal"
 version = "0.1.0"
 
 [[package]]

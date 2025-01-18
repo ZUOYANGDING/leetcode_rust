@@ -3,13 +3,13 @@ resolver = "2"
 members = [
     "balance_tree",
     "bfs_traverse",
-    "binary_tree_path",
+    "binary_tree_path", "has_path_sum",
     "invert_tree",
     "is_symmetric",
     "iteration_traverse",
     "max_depth",
     "min_depth",
-    "most_left_on_bottom",
+    "most_left_on_bottom", "rebuild_tree_by_2_traversal",
     "recursive_traverse",
     "sum_of_left_leaves",
 ]
