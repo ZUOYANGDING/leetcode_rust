@@ -27,6 +27,10 @@ name = "non_decreasing_subsequence"
 version = "0.1.0"
 
 [[package]]
+name = "permute"
+version = "0.1.0"
+
+[[package]]
 name = "restore_ip_addresses"
 version = "0.1.0"
 
