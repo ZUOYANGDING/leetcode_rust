@@ -39,6 +39,10 @@ name = "max_depth"
 version = "0.1.0"
 
 [[package]]
+name = "merge_trees"
+version = "0.1.0"
+
+[[package]]
 name = "min_depth"
 version = "0.1.0"
 

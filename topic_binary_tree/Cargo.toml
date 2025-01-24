@@ -7,7 +7,7 @@ members = [
     "invert_tree",
     "is_symmetric",
     "iteration_traverse",
-    "max_depth",
+    "max_depth", "merge_trees",
     "min_depth",
     "most_left_on_bottom", "rebuild_tree_by_2_traversal",
     "recursive_traverse",
