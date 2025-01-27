@@ -11,6 +11,10 @@ name = "bfs_traverse"
 version = "0.1.0"
 
 [[package]]
+name = "binary_search_tree"
+version = "0.1.0"
+
+[[package]]
 name = "binary_tree_path"
 version = "0.1.0"
 
@@ -28,6 +32,10 @@ version = "0.1.0"
 
 [[package]]
 name = "is_symmetric"
+version = "0.1.0"
+
+[[package]]
+name = "is_valid_bst"
 version = "0.1.0"
 
 [[package]]

@@ -2,10 +2,10 @@
 resolver = "2"
 members = [
     "balance_tree",
-    "bfs_traverse",
+    "bfs_traverse", "binary_search_tree",
     "binary_tree_path", "construct_maximum_binary_tree", "has_path_sum",
     "invert_tree",
-    "is_symmetric",
+    "is_symmetric", "is_valid_bst",
     "iteration_traverse",
     "max_depth", "merge_trees",
     "min_depth",
