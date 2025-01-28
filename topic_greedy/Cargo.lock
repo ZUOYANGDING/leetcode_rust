@@ -7,6 +7,10 @@ name = "buy_stock"
 version = "0.1.0"
 
 [[package]]
+name = "can_jump"
+version = "0.1.0"
+
+[[package]]
 name = "find_content_children"
 version = "0.1.0"
 
