@@ -1,0 +1,6 @@
+[package]
+name = "largest_sum_after_k_negations"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
