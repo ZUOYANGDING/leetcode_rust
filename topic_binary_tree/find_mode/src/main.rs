@@ -58,6 +58,9 @@ impl TreeNode {
         }
     }
 
+    // Basically same idea as the approach with extra space
+    // Which is inorder dfs to go through the tree to have a increasing order of the array
+    // But `get_mode` approach directly with the dfs traverse
     pub fn find_mode(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
         let mut ret = vec![];
         Self::dfs(root, &mut ret, &mut i32::MIN, &mut 0, &mut 0);
@@ -106,14 +109,47 @@ impl TreeNode {
             max_count,
         );
     }
+
+    fn construct_tree_from_array(array: Vec<Option<i32>>) -> Option<Rc<RefCell<TreeNode>>> {
+        if array.is_empty() || array[0].is_none() {
+            return None;
+        }
+
+        let root = Rc::new(RefCell::new(TreeNode::new(array[0].unwrap())));
+        let mut queue = VecDeque::new();
+        queue.push_back(root.clone());
+
+        let mut idx = 1; // Start from index 1 since root is already used
+
+        while !queue.is_empty() && idx < array.len() {
+            let cur_node = queue.pop_front().unwrap();
+
+            // Process left child
+            if idx < array.len() {
+                if let Some(val) = array[idx] {
+                    let left_child = Rc::new(RefCell::new(TreeNode::new(val)));
+                    cur_node.borrow_mut().left = Some(left_child.clone());
+                    queue.push_back(left_child);
+                }
+                idx += 1;
+            }
+
+            // Process right child
+            if idx < array.len() {
+                if let Some(val) = array[idx] {
+                    let right_child = Rc::new(RefCell::new(TreeNode::new(val)));
+                    cur_node.borrow_mut().right = Some(right_child.clone());
+                    queue.push_back(right_child);
+                }
+                idx += 1;
+            }
+        }
+
+        Some(root)
+    }
 }
 
 fn main() {
-    let root = Rc::new(RefCell::new(TreeNode::new(1)));
-    let node_1 = Rc::new(RefCell::new(TreeNode::new(2)));
-    let node_2 = Rc::new(RefCell::new(TreeNode::new(2)));
-    node_1.borrow_mut().left = Some(node_2);
-    root.borrow_mut().right = Some(node_1);
-
-    println!("{:?}", TreeNode::find_mode(Some(root)));
+    let root = TreeNode::construct_tree_from_array(vec![Some(1), None, Some(2), Some(2)]);
+    println!("{:?}", TreeNode::find_mode(root));
 }

@@ -43,48 +43,46 @@ impl TreeNode {
         min
     }
 
-    fn contruct_tree_from_array(array: Vec<Option<i32>>) -> Option<Rc<RefCell<TreeNode>>> {
-        if array.len() < 1 || array[0].is_none() {
+    fn construct_tree_from_array(array: Vec<Option<i32>>) -> Option<Rc<RefCell<TreeNode>>> {
+        if array.is_empty() || array[0].is_none() {
             return None;
         }
-        let root = Some(Rc::new(RefCell::new(TreeNode::new(array[0].unwrap()))));
-        if array.len() < 2 {
-            return root;
-        }
+
+        let root = Rc::new(RefCell::new(TreeNode::new(array[0].unwrap())));
         let mut queue = VecDeque::new();
         queue.push_back(root.clone());
-        let mut idx = 0;
+
+        let mut idx = 1; // Start from index 1 since root is already used
+
         while !queue.is_empty() && idx < array.len() {
-            for _ in 0..queue.len() {
-                if let Some(cur_node) = queue.pop_front().unwrap() {
-                    if idx < array.len() - 2 {
-                        let cur_left = if let Some(val) = array[idx + 1] {
-                            Some(Rc::new(RefCell::new(TreeNode::new(val))))
-                        } else {
-                            None
-                        };
-                        cur_node.borrow_mut().left = cur_left.clone();
-                        queue.push_back(cur_left);
-                        idx += 1;
-                    }
-                    if idx < array.len() - 1 {
-                        let cur_right = if let Some(val) = array[idx + 1] {
-                            Some(Rc::new(RefCell::new(TreeNode::new(val))))
-                        } else {
-                            None
-                        };
-                        cur_node.borrow_mut().right = cur_right.clone();
-                        queue.push_back(cur_right);
-                        idx += 1;
-                    }
+            let cur_node = queue.pop_front().unwrap();
+
+            // Process left child
+            if idx < array.len() {
+                if let Some(val) = array[idx] {
+                    let left_child = Rc::new(RefCell::new(TreeNode::new(val)));
+                    cur_node.borrow_mut().left = Some(left_child.clone());
+                    queue.push_back(left_child);
                 }
+                idx += 1;
+            }
+
+            // Process right child
+            if idx < array.len() {
+                if let Some(val) = array[idx] {
+                    let right_child = Rc::new(RefCell::new(TreeNode::new(val)));
+                    cur_node.borrow_mut().right = Some(right_child.clone());
+                    queue.push_back(right_child);
+                }
+                idx += 1;
             }
         }
-        root
+
+        Some(root)
     }
 }
 fn main() {
-    let root = TreeNode::contruct_tree_from_array(vec![
+    let root = TreeNode::construct_tree_from_array(vec![
         Some(1),
         Some(0),
         Some(48),
