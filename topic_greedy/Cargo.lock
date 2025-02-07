@@ -23,6 +23,10 @@ name = "largest_sum_after_k_negations"
 version = "0.1.0"
 
 [[package]]
+name = "lemonade_change"
+version = "0.1.0"
+
+[[package]]
 name = "max_sub_array"
 version = "0.1.0"
 

@@ -51,6 +51,10 @@ name = "iteration_traverse"
 version = "0.1.0"
 
 [[package]]
+name = "lowest_common_ancestor"
+version = "0.1.0"
+
+[[package]]
 name = "max_depth"
 version = "0.1.0"
 
