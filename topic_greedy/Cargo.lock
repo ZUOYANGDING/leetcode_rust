@@ -31,5 +31,9 @@ name = "max_sub_array"
 version = "0.1.0"
 
 [[package]]
+name = "reconstruct_queue"
+version = "0.1.0"
+
+[[package]]
 name = "wiggle_max_length"
 version = "0.1.0"

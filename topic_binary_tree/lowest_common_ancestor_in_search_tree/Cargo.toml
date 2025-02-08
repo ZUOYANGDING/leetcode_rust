@@ -1,0 +1,6 @@
+[package]
+name = "lowest_common_ancestor_in_search_tree"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
