@@ -11,7 +11,15 @@ name = "can_jump"
 version = "0.1.0"
 
 [[package]]
+name = "erase_overlap_intervals"
+version = "0.1.0"
+
+[[package]]
 name = "find_content_children"
+version = "0.1.0"
+
+[[package]]
+name = "find_min_arrow_shots"
 version = "0.1.0"
 
 [[package]]
