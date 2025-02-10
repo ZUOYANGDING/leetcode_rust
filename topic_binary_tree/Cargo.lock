@@ -35,6 +35,10 @@ name = "has_path_sum"
 version = "0.1.0"
 
 [[package]]
+name = "insert_into_bst"
+version = "0.1.0"
+
+[[package]]
 name = "invert_tree"
 version = "0.1.0"
 

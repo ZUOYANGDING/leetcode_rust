@@ -71,16 +71,20 @@ impl TreeNode {
         let mut idx = 1;
         while !queue.is_empty() && idx < array.len() {
             let cur_node = queue.pop_front().unwrap();
-            if idx < array.len() && array[idx].is_some() {
-                let left_child = Rc::new(RefCell::new(TreeNode::new(array[idx].unwrap())));
-                cur_node.as_ref().unwrap().borrow_mut().left = Some(left_child.clone());
-                queue.push_back(Some(left_child));
+            if idx < array.len() {
+                if array[idx].is_some() {
+                    let left_child = Rc::new(RefCell::new(TreeNode::new(array[idx].unwrap())));
+                    cur_node.as_ref().unwrap().borrow_mut().left = Some(left_child.clone());
+                    queue.push_back(Some(left_child));
+                }
                 idx += 1;
             }
-            if idx < array.len() && array[idx].is_some() {
-                let right_child = Rc::new(RefCell::new(TreeNode::new(array[idx].unwrap())));
-                cur_node.as_ref().unwrap().borrow_mut().right = Some(right_child.clone());
-                queue.push_back(Some(right_child));
+            if idx < array.len() {
+                if array[idx].is_some() {
+                    let right_child = Rc::new(RefCell::new(TreeNode::new(array[idx].unwrap())));
+                    cur_node.as_ref().unwrap().borrow_mut().right = Some(right_child.clone());
+                    queue.push_back(Some(right_child));
+                }
                 idx += 1;
             }
         }
