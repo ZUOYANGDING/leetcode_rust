@@ -39,6 +39,10 @@ name = "max_sub_array"
 version = "0.1.0"
 
 [[package]]
+name = "merge"
+version = "0.1.0"
+
+[[package]]
 name = "partition_labels"
 version = "0.1.0"
 

@@ -1,3 +1,3 @@
 [workspace]
 resolver = "2"
-members = [ "buy_stock", "can_jump", "erase_overlap_intervals","find_content_children", "find_min_arrow_shots", "gas_station", "largest_sum_after_k_negations", "lemonade_change", "max_sub_array", "partition_labels", "reconstruct_queue", "wiggle_max_length"]
+members = [ "buy_stock", "can_jump", "erase_overlap_intervals","find_content_children", "find_min_arrow_shots", "gas_station", "largest_sum_after_k_negations", "lemonade_change", "max_sub_array", "merge", "partition_labels", "reconstruct_queue", "wiggle_max_length"]
