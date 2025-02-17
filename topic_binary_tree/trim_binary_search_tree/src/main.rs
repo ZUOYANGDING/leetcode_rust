@@ -1,5 +1,5 @@
 /**
- * Leetcode 450
+ * Leetcode 669
  */
 use std::{cell::RefCell, collections::VecDeque, rc::Rc};
 
@@ -19,45 +19,25 @@ impl TreeNode {
         }
     }
 
-    pub fn delete_node(
+    pub fn trim_bst(
         root: Option<Rc<RefCell<TreeNode>>>,
-        key: i32,
+        low: i32,
+        high: i32,
     ) -> Option<Rc<RefCell<TreeNode>>> {
-        // cannot find target node
         if root.is_none() {
-            return root;
+            return None;
         }
-        let cur_node = root.clone().unwrap();
-        if cur_node.borrow().val == key {
-            if cur_node.borrow().left.is_none() && cur_node.borrow().right.is_none() {
-                // target node is leaf
-                // just delete
-                return None;
-            } else if cur_node.borrow().left.is_none() && cur_node.borrow().right.is_some() {
-                // target node left is none, use right subtree to replace the target
-                return cur_node.borrow().right.clone();
-            } else if cur_node.borrow().left.is_some() && cur_node.borrow().right.is_none() {
-                // target node right is none, use left subtree to replace the target
-                return cur_node.borrow().left.clone();
-            } else {
-                // both left and right not none
-                // find the most left of right
-                let mut tmp = cur_node.borrow().right.clone();
-                while tmp.clone().unwrap().borrow().left.is_some() {
-                    tmp = tmp.clone().unwrap().borrow().left.clone();
-                }
-                // set the current left child as left child of the most left of current right child
-                tmp.as_ref().unwrap().borrow_mut().left = cur_node.borrow().left.clone();
-                // replace current as current right
-                return cur_node.borrow().right.clone();
-            }
-        } else if cur_node.borrow().val < key {
-            let right_node = Self::delete_node(cur_node.borrow().right.clone(), key);
-            cur_node.borrow_mut().right = right_node;
-        } else {
-            let left_node = Self::delete_node(cur_node.borrow().left.clone(), key);
-            cur_node.borrow_mut().left = left_node;
+        let mut cur_node = root.as_ref().unwrap().borrow_mut();
+        if cur_node.val < low {
+            // trim the cur_node and its left sub_tree
+            return Self::trim_bst(cur_node.right.clone(), low, high);
         }
+        if cur_node.val > high {
+            // trim the cur_node and its right sub_tree
+            return Self::trim_bst(cur_node.left.clone(), low, high);
+        }
+        cur_node.left = Self::trim_bst(cur_node.left.clone(), low, high);
+        cur_node.right = Self::trim_bst(cur_node.right.clone(), low, high);
         drop(cur_node);
         root
     }
@@ -112,16 +92,17 @@ impl TreeNode {
 
 fn main() {
     let root = TreeNode::construct_tree_from_array(vec![
-        Some(5),
         Some(3),
-        Some(6),
-        Some(2),
+        Some(0),
         Some(4),
         None,
-        Some(7),
+        Some(2),
+        None,
+        None,
+        Some(1),
     ]);
-    let after_delete = TreeNode::delete_node(root, 3);
+    let after_trim = TreeNode::trim_bst(root, 1, 3);
     let mut ret = vec![];
-    TreeNode::in_order(after_delete, &mut ret);
+    TreeNode::in_order(after_trim, &mut ret);
     println!("{:?}", ret);
 }

@@ -11,5 +11,5 @@ members = [
     "min_depth",
     "most_left_on_bottom", "rebuild_tree_by_2_traversal",
     "recursive_traverse",
-    "sum_of_left_leaves",
+    "sum_of_left_leaves", "trim_binary_search_tree",
 ]
