@@ -19,6 +19,10 @@ name = "binary_tree_path"
 version = "0.1.0"
 
 [[package]]
+name = "build_bst_from_sorted_array"
+version = "0.1.0"
+
+[[package]]
 name = "construct_maximum_binary_tree"
 version = "0.1.0"
 
