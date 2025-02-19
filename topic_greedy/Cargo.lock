@@ -43,6 +43,10 @@ name = "merge"
 version = "0.1.0"
 
 [[package]]
+name = "monotone_increasing_digits"
+version = "0.1.0"
+
+[[package]]
 name = "partition_labels"
 version = "0.1.0"
 
