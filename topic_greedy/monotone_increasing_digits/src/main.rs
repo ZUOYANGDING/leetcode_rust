@@ -10,7 +10,7 @@
  */
 struct Solution;
 impl Solution {
-    pub fn monotone_increasing_digits(mut n: i32) -> i32 {
+    pub fn monotone_increasing_digits(n: i32) -> i32 {
         if n < 10 {
             return n;
         }
