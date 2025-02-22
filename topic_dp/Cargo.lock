@@ -19,5 +19,9 @@ name = "min_cost_climbing_stairs"
 version = "0.1.0"
 
 [[package]]
+name = "possible_bst_from_sorted_array"
+version = "0.1.0"
+
+[[package]]
 name = "unique_paths"
 version = "0.1.0"

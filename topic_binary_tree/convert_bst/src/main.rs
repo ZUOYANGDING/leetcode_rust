@@ -1,7 +1,7 @@
 /**
  * Leetcode 538
  */
-use std::{array, cell::RefCell, collections::VecDeque, rc::Rc};
+use std::{cell::RefCell, collections::VecDeque, rc::Rc};
 
 struct TreeNode {
     val: i32,
@@ -130,7 +130,7 @@ fn main() {
     ]);
 
     // let after_convert_1 = TreeNode::convert_bst_stupid(root.clone());
-    let after_convert_2 = TreeNode::convert_bst(root.clone());
+    let after_convert_2 = TreeNode::convert_bst(root);
     let mut ret = vec![];
     TreeNode::in_order(after_convert_2, &mut ret);
     println!("{:?}", ret);

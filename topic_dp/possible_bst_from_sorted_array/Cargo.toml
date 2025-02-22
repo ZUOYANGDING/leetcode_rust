@@ -1,0 +1,6 @@
+[package]
+name = "possible_bst_from_sorted_array"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
