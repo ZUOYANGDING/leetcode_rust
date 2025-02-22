@@ -3,7 +3,7 @@ resolver = "2"
 members = [
     "balance_tree",
     "bfs_traverse", "binary_search_tree",
-    "binary_tree_path", "build_bst_from_sorted_array", "construct_maximum_binary_tree", "delete_in_binary_search_tree", "find_mode", "get_minimum_difference", "has_path_sum", "insert_into_bst",
+    "binary_tree_path", "build_bst_from_sorted_array", "construct_maximum_binary_tree", "convert_bst", "delete_in_binary_search_tree", "find_mode", "get_minimum_difference", "has_path_sum", "insert_into_bst",
     "invert_tree",
     "is_symmetric", "is_valid_bst",
     "iteration_traverse", "lowest_common_ancestor", "lowest_common_ancestor_in_search_tree",
