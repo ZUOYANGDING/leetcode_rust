@@ -29,6 +29,26 @@ impl Solution {
         }
         dp[num_of_item - 1][knapsack_weight]
     }
+
+    fn zero_one_knapsack_one_dim_dp_array(
+        item_array: &Vec<i32>,
+        value_array: &Vec<i32>,
+        knapsack_weight: usize,
+    ) -> i32 {
+        assert!(item_array.len() == value_array.len());
+        let num_of_item = item_array.len();
+
+        // init dp
+        let mut dp = vec![0; knapsack_weight + 1];
+        for i in 0..num_of_item {
+            for j in (item_array[i] as usize..=knapsack_weight).rev() {
+                // j < weight[i] do not need to be count
+                dp[j] = std::cmp::max(dp[j], dp[j - item_array[i] as usize] + value_array[i]);
+            }
+        }
+
+        dp[knapsack_weight]
+    }
 }
 
 fn main() {
@@ -60,6 +80,6 @@ fn main() {
 
     println!(
         "{}",
-        Solution::zero_one_knapsack(&item_array, &value_array, numbers[1])
+        Solution::zero_one_knapsack_one_dim_dp_array(&item_array, &value_array, numbers[1])
     )
 }

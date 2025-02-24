@@ -19,3 +19,16 @@
 - Consider the init:
   - for i == 0, j in 0..n, dp[0][j] = value[0]. Which means choose item 0, value of knapsack always be value[0].
   - for j == 0, i in 0..m, dp[i][0] = 0. Which means the knapsack with weight 0, value of knapsack always be 0.
+- Make it simple (compress from 2D dp array to 1D dp array):
+  - Our target is to record the max value of knapsack with each weight 0..j..n. Therefore, it does not need to record to choose item 0 to item i for each weight j (just record the max of them).
+  - compare the 2D array to 1D array as dp[j] which record the max value of knapsack with weight j
+  - To decide dp[j]:
+    - do not choose a new item i: dp[j]
+    - choose a new item i: dp[j-weight[i]] + value[i]
+  - init dp: when j==0, means the weight of the knapsack is 0, so the value of it is 0;
+  - Still use 2 iteration:
+    - iteration order : cannot be iter 1..m as outer and then iter 0..n as inner:
+      - Example:
+        -  3 items with weight [1, 3, 4] and value [15, 20, 30]; knapsack weight is 4
+        - for dp[2] = max(dp[2-weight[0]] + value[0], dp[2]), in this case the item 0 count twice
+        - 
