@@ -3,6 +3,10 @@
 version = 4
 
 [[package]]
+name = "can_partition"
+version = "0.1.0"
+
+[[package]]
 name = "clime_stairs"
 version = "0.1.0"
 
