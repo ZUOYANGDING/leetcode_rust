@@ -1,0 +1,6 @@
+[package]
+name = "last_stone_weight_ii"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
