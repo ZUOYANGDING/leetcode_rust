@@ -1,0 +1,3 @@
+[workspace]
+resolver = "2"
+members = ["all_paths_sourch_to_target_in_dag"]
