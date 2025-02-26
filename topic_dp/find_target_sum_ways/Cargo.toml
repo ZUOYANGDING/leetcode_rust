@@ -1,0 +1,6 @@
+[package]
+name = "find_target_sum_ways"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
