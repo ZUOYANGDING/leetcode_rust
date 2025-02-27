@@ -15,6 +15,10 @@ name = "fib"
 version = "0.1.0"
 
 [[package]]
+name = "find_max_form"
+version = "0.1.0"
+
+[[package]]
 name = "find_target_sum_ways"
 version = "0.1.0"
 
