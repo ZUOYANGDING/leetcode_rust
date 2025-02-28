@@ -1,3 +1,3 @@
 [workspace]
 resolver = "2"
-members = [ "can_partition", "clime_stairs","fib", "find_max_form", "find_target_sum_ways", "integer_break", "last_stone_weight_ii", "min_cost_climbing_stairs", "possible_bst_from_sorted_array", "unique_paths", "zero_one_knapsack"]
+members = [ "can_partition", "clime_stairs","fib", "find_max_form", "find_target_sum_ways", "full_knapsack", "integer_break", "last_stone_weight_ii", "min_cost_climbing_stairs", "possible_bst_from_sorted_array", "unique_paths", "zero_one_knapsack"]

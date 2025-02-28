@@ -23,6 +23,10 @@ name = "find_target_sum_ways"
 version = "0.1.0"
 
 [[package]]
+name = "full_knapsack"
+version = "0.1.0"
+
+[[package]]
 name = "integer_break"
 version = "0.1.0"
 
