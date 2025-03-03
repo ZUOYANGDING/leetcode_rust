@@ -15,6 +15,10 @@ name = "coin_change_ii"
 version = "0.1.0"
 
 [[package]]
+name = "combination_sum_iv"
+version = "0.1.0"
+
+[[package]]
 name = "fib"
 version = "0.1.0"
 

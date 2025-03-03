@@ -2,7 +2,7 @@
 resolver = "2"
 members = [
     "can_partition",
-    "clime_stairs", "coin_change_ii",
+    "clime_stairs", "coin_change_ii", "combination_sum_iv",
     "fib",
     "find_max_form",
     "find_target_sum_ways",
